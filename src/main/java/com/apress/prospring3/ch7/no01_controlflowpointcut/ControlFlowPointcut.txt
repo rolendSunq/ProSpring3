@@ -1,0 +1,15 @@
+이 예제는 특정 메서드에서 TestBean의 foo() 메서드를 호출할 때만 어드바이스를 적용하기로 한다.
+
+ControlFlowMain 클래스에서 foo() 메서드를 2번 호출한다.
+run()메서스와 test()메서드에서 호출한다.
+
+Pointcut pc = new ControlFlowPointcut(ControlFlowMain.class, "test");
+ControlFlowMain클래스의 test()메서드에 포인트컷을 적용하겠다는 것이다.
+
+ControlFlowPointcut 인스턴스에 해당하는 Advisor를 통해 어드바이스가 적용되는 프록시 객체의
+모든 메서드를 포인트컷한다.
+
+이 예제를 실행하려면 CGLIB 의존성을 추가해야 한다.
+
+ControlFlowPointcut은 다른 객체와의 맥락 속에서 메서드가 실행될 때만 객체에 선택적으로 어드바이스를
+적용할 수 있다는 점에서 무척 유용하다. 그러나 다른 포인트컷과 비교하면 휠신 큰 성능 부담이 따른다.
