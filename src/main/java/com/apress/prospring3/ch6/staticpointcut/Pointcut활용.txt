@@ -1,0 +1,7 @@
+Advisor 인터페이스의 인스턴스를 생성하거나 PointcutAdvisor 인터페이스의 인스턴스를 생성해야 한다.
+스프링은 여러개 Pointcut을 제공하고 그 중 DefaultPointcutAdvisor 인터페이스를 구현하는 AbstractGenericPointcut Advisor
+추상클래스를 상속한다.
+DefaultPointcutAdvisor는 한개의 Pointcut을 한 개의 Advice와 연계하는 간단한 PointcutAdvisor다.
+
+aop 네임스페이스로 XML 설정에서 포인트컷을 선언할때와 @AspectJ 애노테이션 방식 aop 지원 기능 시 스프링은 기본적으로 
+AspectJ가 기본적으로 지원되므로 AspectJ 표현식을 사용하는 것이 가장 좋다. 
