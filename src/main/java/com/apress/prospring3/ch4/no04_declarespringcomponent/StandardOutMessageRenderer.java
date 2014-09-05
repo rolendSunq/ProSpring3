@@ -1,6 +1,8 @@
-package com.apress.prospring3.ch2.no05_helloworld;
+package com.apress.prospring3.ch4.no04_declarespringcomponent;
 
+import org.springframework.stereotype.Service;
 
+@Service("messageRenderer")
 public class StandardOutMessageRenderer implements MessageRenderer {
 	
 	private MessageProvider messageProvider = null;

@@ -9,6 +9,8 @@
 	<configs>
 		<config>src/main/java/com/apress/prospring3/ch7/no04_proxyfactorybean/ProxyFactoryBean.xml</config>
 		<config>src/main/java/com/apress/prospring3/ch2/no05_helloworld/conf/app-context.xml</config>
+		<config>src/main/resources/ch4/no02_usingbeanfactory/xmlBeanFactory.xml</config>
+		<config>src/main/resources/ch4/no04_declarespringcomponent/app-context-annotation.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

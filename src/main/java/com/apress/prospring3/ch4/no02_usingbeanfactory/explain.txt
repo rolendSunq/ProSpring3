@@ -1,0 +1,47 @@
+스프링에서 ApplicationContext 인터페이스는 BeanFactory를 상속한다.
+또한 여러 서비스도 제공한다.(DI, Transaction, AOP, i18n, ApplicationEvent)
+맞는 말이다. 
+
+말 그대로 소스로 옮겨 본다면.
+public interface ApplicationContext extends BeanFactory {
+}
+
+여기서 여러 서비스도 제공한다고 했다. 물론 인터페이스에서 말이다.
+구현체가 있어야 가능하지만...
+결국 BeanFactory 외에 다른 인터페이스가 결합되면 이야기는 맞는 말이 될것이다.
+상상력을 자극하지 않고 명쾌하게 보길 원한다면 아래와 같은 소스를 봐야 된다.
+
+package org.springframework.context;
+
+import org.springframework.beans.factory.HierarchicalBeanFactory;
+import org.springframework.beans.factory.ListableBeanFactory;
+import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
+import org.springframework.core.env.EnvironmentCapable;
+import org.springframework.core.io.support.ResourcePatternResolver;
+
+public interface ApplicationContext extends EnvironmentCapable, ListableBeanFactory, HierarchicalBeanFactory,
+		MessageSource, ApplicationEventPublisher, ResourcePatternResolver {
+	
+	String getId();
+
+	
+	String getApplicationName();
+
+	
+	String getDisplayName();
+
+
+	long getStartupDate();
+
+	
+	ApplicationContext getParent();
+
+	AutowireCapableBeanFactory getAutowireCapableBeanFactory() throws IllegalStateException;
+
+}
+
+자 이것으로 ApplicationContext를 봐왔다.
+결론은 단순히 ApplicationContext를 정의하기에는 2줄로는 힘들다는 것이다.
+
+다시 저자의 본문의 글을 보면서 학습하기에는 진정 스프링의 뜻을 헤아리기에는 부족하다.
+그러나 저자의 말을 진정 성서라 보며 다시 학습의 길로 가보자.                                                                                                                                                 

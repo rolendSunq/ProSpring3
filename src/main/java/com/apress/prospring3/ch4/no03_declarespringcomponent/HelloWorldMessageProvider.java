@@ -1,6 +1,8 @@
-package com.apress.prospring3.ch2.no05_helloworld;
+package com.apress.prospring3.ch4.no03_declarespringcomponent;
 
+import org.springframework.stereotype.Service;
 
+@Service("messageProvider")
 public class HelloWorldMessageProvider implements MessageProvider {
 
 	@Override
