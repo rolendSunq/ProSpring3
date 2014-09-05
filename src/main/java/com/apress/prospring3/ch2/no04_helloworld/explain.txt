@@ -1,0 +1,6 @@
+최소화 단계를 거친 메세지 변경.
+최소화 단계의 렌더링 메커니즘 변경.
+이러한 요구 사항의 결과로 인터페이스가 도입되었다.
+MessageProvider, MessageRenderer 이 두개의 인터페이스는 위의 요구 조건을 충족 시킨다.
+MessageRenderer는 메세지를 생성할 수 있도록 했으며, MessageProvider는 메세지를 조회하여
+렌더러에게 가져다 주는 MessageProvider 구현체에 의존한다.

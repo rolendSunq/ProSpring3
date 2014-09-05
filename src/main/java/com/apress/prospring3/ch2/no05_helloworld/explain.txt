@@ -1,0 +1,20 @@
+ApplicationContext 설정 파일
+기본 네임 스페이스 beans이며 beans 내에서 스프링이 관리하는 의존성 조건을 선언해 스프링이 이들 의존성을 리졸브하고 
+주입하는 데 사용된다.
+
+provider와 renderer 는 id를 선언하고 해당 빈을 정의 했다. ApplicationContext는 빈 정의를 검색하고 정의된 빈들의 
+클래스 인스턴스를 생성하고 id를 사용해 저장한다.
+
+주목할 점은 MessageProvider 인터페이스에 의존해 메세지를 렌더러에게 전달하는 점이다.
+스프링은 이런 의존성 정보 (DI)를 알려주기 위해 p 네임스페이스를 사용한다.
+p:messageProvider-ref="provider"
+태그 속성은 messageProvider 빈 프로퍼티를 또 다른 빈과 함께 주입한다는 것을 보는 바와 같이 설정한다.
+프로퍼티에게 주입할 빈은 id를 통해 참조하며 해당 빈의 messageProvider 프로퍼티를 찾고 id 가 provider인 빈을 인스
+턴스로 주입한다.
+
+ApplicationContext 초기화가 끝나면 main() 메서드는 getBean() 메서드를 사용하여 MessageRenderer 빈을 가져오고
+render() 메소드를 호출한다.
+
+이전에 설명했듯이 MessageProvider 를 생성 후 MessageRenderer 구현 클래스에 프로퍼티로 DI 되었던 사실을 알고 있다.
+스프링을 사용하면 서로 연결되는 클래스를 전혀 수정하지 않아도 된다. (경우에 따라서 변화할 수 있다)
+
