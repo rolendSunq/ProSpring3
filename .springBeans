@@ -11,6 +11,10 @@
 		<config>src/main/java/com/apress/prospring3/ch2/no05_helloworld/conf/app-context.xml</config>
 		<config>src/main/resources/ch4/no02_usingbeanfactory/xmlBeanFactory.xml</config>
 		<config>src/main/resources/ch4/no04_declarespringcomponent/app-context-annotation.xml</config>
+		<config>src/main/resources/ch4/no07_constructor_confusion/app-context-constructor_confusion.xml</config>
+		<config>src/main/resources/ch4/no09_constructor_confusion/app-context-constructor_confusion.xml</config>
+		<config>src/main/resources/ch4/no10_inject_parameter/app-context-inject_parameter.xml</config>
+		<config>src/main/resources/ch4/no11_inject_parameter/app-context-inject_parameter.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
