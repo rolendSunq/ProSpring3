@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="oracle" class="com.apress.prospring3.ch4.no14_inject_bean.BookwormOracle"/>
+	
+	<bean id="injectRef" class="com.apress.prospring3.ch4.no14_inject_bean.InjectRef">
+		<property name="oracle">
+			<ref local="oracle"/>
+		</property>
+	</bean>
+	
+</beans>

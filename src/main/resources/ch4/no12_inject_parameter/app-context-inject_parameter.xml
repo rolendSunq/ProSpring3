@@ -3,10 +3,23 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
-	<bean id="injectSimpleConfig" class="com.apress.prospring3.ch4.no12_inject_parameter.InjectSimpleConfig">
+	<bean id="injectSimpleConfig" class="com.apress.prospring3.ch4.no12_inject_parameter.InjectSimpleConfig"/>
+	
+	<bean id="injectSimpleSpel" class="com.apress.prospring3.ch4.no12_inject_parameter.InjectSimpleSpel">
 		<property name="name">
 			<value>#{injectSimpleConfig.name}</value>
 		</property>
-
+		<property name="age">
+			<value>#{injectSimpleConfig.age + 1}</value>
+		</property>
+		<property name="height">
+			<value>#{injectSimpleConfig.height}</value>
+		</property>
+		<property name="programmer">
+			<value>#{injectSimpleConfig.programmer}</value>
+		</property>
+		<property name="ageInSeconds">
+			<value>#{injectSimpleConfig.ageInSeconds}</value>
+		</property>
 	</bean>
 </beans>

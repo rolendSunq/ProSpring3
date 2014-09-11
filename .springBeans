@@ -16,6 +16,11 @@
 		<config>src/main/resources/ch4/no10_inject_parameter/app-context-inject_parameter.xml</config>
 		<config>src/main/resources/ch4/no11_inject_parameter/app-context-inject_parameter.xml</config>
 		<config>src/main/resources/ch4/no12_inject_parameter/app-context-inject_parameter.xml</config>
+		<config>src/main/resources/ch4/no13_inject_parameter/app-context-inject_parameter.xml</config>
+		<config>src/main/resources/ch4/no14_inject_Bean/app-context-inject_bean.xml</config>
+		<config>src/main/resources/ch4/no15_context_duplicate/app-context-parent.xml</config>
+		<config>src/main/resources/ch4/no15_context_duplicate/app-context-child.xml</config>
+		<config>src/main/resources/ch4/no16_collection_injection/app-context-collection_injection.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="oracle" class="com.apress.prospring3.ch4.no16_collection_injection.BookwormOracle"/>
+	
+	<bean id="injectCollection" class="com.apress.prospring3.ch4.no16_collection_injection.CollectionInjection">
+		<property name="map">
+			<map>
+				<entry key="someValue">
+					<value>Hello World!</value>
+				</entry>
+			</map>
+		</property>
+		<property name="props">
+			<props>
+				<prop key="firstName">Rolend</prop>
+				<prop key="secondName">Sunq</prop>
+			</props>
+		</property>
+		<property name="set">
+			<set>
+				<value>Hello World!</value>
+				<ref local="oracle"/>
+			</set>
+		</property>
+		<property name="list">
+			<list>
+				<value>Hello World!</value>
+				<ref local="oracle"/>
+			</list>
+		</property>
+	</bean>
+
+</beans>

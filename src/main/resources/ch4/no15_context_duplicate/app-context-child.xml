@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="target1" class="com.apress.prospring3.ch4.no15_context_duplicate.SimpleTarget">
+		<property name="val">
+			<ref bean="injectBeanParent"/>
+		</property>
+	</bean>
+	
+	<bean id="target2" class="com.apress.prospring3.ch4.no15_context_duplicate.SimpleTarget">
+		<property name="val">
+			<ref bean="injectBean"/>
+		</property>
+	</bean>
+	
+	<bean id="target3" class="com.apress.prospring3.ch4.no15_context_duplicate.SimpleTarget">
+		<property name="val">
+			<ref parent="injectBean"/>
+		</property>
+	</bean>
+	
+	<bean id="injectBean" class="java.lang.String">
+		<constructor-arg>
+			<value>자식 빈</value>
+		</constructor-arg>
+	</bean>
+	
+</beans>
