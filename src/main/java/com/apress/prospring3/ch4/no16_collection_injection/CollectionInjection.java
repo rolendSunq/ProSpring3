@@ -1,12 +1,12 @@
 package com.apress.prospring3.ch4.no16_collection_injection;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 
 import org.springframework.context.support.GenericXmlApplicationContext;
 
-import antlr.collections.List;
 
 public class CollectionInjection {
 	
@@ -49,7 +49,7 @@ public class CollectionInjection {
 		}
 		
 		// 프로퍼티를 표시
-		System.out.println("Map contents: \n");
+		System.out.println("Properties contents: \n");
 		for (Map.Entry<Object, Object> entry : props.entrySet()) {
 			System.out.println("Key: " + entry.getKey() + " - Value: " + entry.getValue());
 		}
@@ -61,8 +61,8 @@ public class CollectionInjection {
 		}
 		
 		// List를 표시
-		System.out.println("\nSet contents:\n");
-		for (Object obj : set) {
+		System.out.println("\nList contents:\n");
+		for (Object obj : list) {
 			System.out.println("Value: " + obj);
 		}
 	}
