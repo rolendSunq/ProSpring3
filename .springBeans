@@ -21,6 +21,9 @@
 		<config>src/main/resources/ch4/no15_context_duplicate/app-context-parent.xml</config>
 		<config>src/main/resources/ch4/no15_context_duplicate/app-context-child.xml</config>
 		<config>src/main/resources/ch4/no16_collection_injection/app-context-collection_injection.xml</config>
+		<config>src/main/resources/ch4/no17_collection_injection/app-context-collection_injection.xml</config>
+		<config>src/main/resources/ch4/no18_method_injection/app-context-method_injection.xml</config>
+		<config>src/main/resources/ch4/no19_method_injection/app-context-method_injection.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
