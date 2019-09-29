@@ -7,6 +7,8 @@ import org.springframework.aop.support.DefaultIntroductionAdvisor;
  * 
  */
 public class IsModifiedAdvisor extends DefaultIntroductionAdvisor{
+	private static final long serialVersionUID = 3710475569225276938L;
+
 	public IsModifiedAdvisor() {
 		super(new IsModifiedMixin());
 	}

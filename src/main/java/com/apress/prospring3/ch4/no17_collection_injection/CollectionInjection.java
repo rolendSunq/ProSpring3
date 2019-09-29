@@ -20,12 +20,13 @@ public class CollectionInjection {
 	private Properties props;
 	
 	@Resource(name="set")
-	private Set set;
+	private Set<Object> set;
 	
 	@Resource(name="list")
-	private List list;
+	private List<Object> list;
 	
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
 		ctx.load("classpath:ch4/no17_collection_injection/app-context-collection_injection.xml");
 		ctx.refresh();

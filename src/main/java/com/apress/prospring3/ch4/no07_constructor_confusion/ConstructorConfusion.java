@@ -17,6 +17,7 @@ public class ConstructorConfusion {
 	}
 	
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
 		ctx.load("classpath:ch4/no07_constructor_confusion/app-context-constructor_confusion.xml");
 		ctx.refresh();

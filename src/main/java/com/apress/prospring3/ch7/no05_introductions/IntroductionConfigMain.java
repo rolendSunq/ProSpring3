@@ -5,6 +5,7 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 public class IntroductionConfigMain {
 
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
 		ctx.load("classpath:com/apress/prospring3/ch7/no05_introductions/introductions.xml");
 		ctx.refresh();

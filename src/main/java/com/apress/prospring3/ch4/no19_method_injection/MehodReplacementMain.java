@@ -6,6 +6,7 @@ import org.springframework.util.StopWatch;
 public class MehodReplacementMain {
 
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
 		ctx.load("classpath:ch4/no19_method_injection/app-context-method_injection.xml");
 		ctx.refresh();
@@ -24,6 +25,7 @@ public class MehodReplacementMain {
 		stopWatch.start("perfTest");
 		
 		for (int i = 0; i < 1000000; i++) {
+			@SuppressWarnings("unused")
 			String out = target.formatMessage("foo");
 		}
 		

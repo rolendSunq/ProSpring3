@@ -9,6 +9,7 @@ public class HelloWorldSpringDI {
 
 	public static void main(String[] args) {
 		// 스프링 ApplicationContext 초기화
+		@SuppressWarnings("resource")
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("com/apress/prospring3/ch2/no05_helloworld/conf/app-context.xml");
 		MessageRenderer mr = ctx.getBean("renderer", MessageRenderer.class);
 		mr.render();

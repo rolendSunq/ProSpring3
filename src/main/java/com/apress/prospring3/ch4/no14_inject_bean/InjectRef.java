@@ -11,6 +11,7 @@ public class InjectRef {
 	}
 	
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
 		ctx.load("classpath:ch4/no14_inject_bean/app-context-inject_bean.xml");
 		ctx.refresh();

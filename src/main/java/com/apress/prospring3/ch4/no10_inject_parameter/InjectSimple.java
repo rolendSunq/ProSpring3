@@ -15,6 +15,7 @@ public class InjectSimple {
 	private Long ageInSeconds;
 	
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
 		ctx.load("classpath:ch4/no10_inject_parameter/app-context-inject_parameter.xml");
 		ctx.refresh();

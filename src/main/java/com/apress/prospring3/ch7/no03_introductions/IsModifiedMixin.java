@@ -8,6 +8,7 @@ import org.aopalliance.intercept.MethodInvocation;
 import org.springframework.aop.support.DelegatingIntroductionInterceptor;
 import org.springframework.util.ReflectionUtils.MethodCallback;
 
+@SuppressWarnings("serial")
 public class IsModifiedMixin extends DelegatingIntroductionInterceptor implements IsModified{
 	
 	private boolean isModified = false;

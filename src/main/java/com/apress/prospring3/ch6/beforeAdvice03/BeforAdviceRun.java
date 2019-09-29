@@ -7,6 +7,7 @@ import org.springframework.aop.framework.ProxyFactory;
 
 public class BeforAdviceRun {
 	private ProxyFactory pf;
+	@SuppressWarnings("unused")
 	private MessageWriter mw;
 	
 	public BeforAdviceRun() {

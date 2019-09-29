@@ -6,6 +6,7 @@ import org.springframework.util.StopWatch;
 public class LookupDemo {
 
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
 		ctx.load("classpath:ch4/no18_method_injection/app-context-method_injection.xml");
 		ctx.refresh();

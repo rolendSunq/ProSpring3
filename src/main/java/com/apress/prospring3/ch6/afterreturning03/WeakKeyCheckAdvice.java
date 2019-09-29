@@ -2,7 +2,6 @@ package com.apress.prospring3.ch6.afterreturning03;
 
 import java.lang.reflect.Method;
 
-import org.hibernate.ejb.criteria.ValueHandlerFactory.LongValueHandler;
 import org.springframework.aop.AfterReturningAdvice;
 
 public class WeakKeyCheckAdvice implements AfterReturningAdvice {

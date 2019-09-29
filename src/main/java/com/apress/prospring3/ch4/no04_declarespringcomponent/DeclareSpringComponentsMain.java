@@ -5,6 +5,7 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 public class DeclareSpringComponentsMain {
 
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
 		ctx.load("classpath:ch4/no04_declarespringcomponent/app-context-annotation.xml");
 		ctx.refresh();

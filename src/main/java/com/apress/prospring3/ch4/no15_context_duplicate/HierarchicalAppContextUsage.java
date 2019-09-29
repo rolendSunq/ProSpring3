@@ -9,6 +9,7 @@ public class HierarchicalAppContextUsage {
 		parent.load("classpath:ch4/no15_context_duplicate/app-context-parent.xml");
 		parent.refresh();
 		
+		@SuppressWarnings("resource")
 		GenericXmlApplicationContext child = new GenericXmlApplicationContext();
 		child.load("classpath:ch4/no15_context_duplicate/app-context-child.xml");
 		child.setParent(parent);

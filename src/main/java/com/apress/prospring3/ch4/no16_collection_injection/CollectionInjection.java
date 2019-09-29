@@ -12,10 +12,11 @@ public class CollectionInjection {
 	
 	private Map<String, Object> map;
 	private Properties props;
-	private Set set;
-	private List list;
+	private Set<Object> set;
+	private List<Object> list;
 	
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
 		ctx.load("classpath:ch4/no16_collection_injection/app-context-collection_injection.xml");
 		ctx.refresh();
@@ -32,11 +33,11 @@ public class CollectionInjection {
 		this.props = props;
 	}
 
-	public void setSet(Set set) {
+	public void setSet(Set<Object> set) {
 		this.set = set;
 	}
 
-	public void setList(List list) {
+	public void setList(List<Object> list) {
 		this.list = list;
 	}
 	
